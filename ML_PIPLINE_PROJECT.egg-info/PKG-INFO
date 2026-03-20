@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: ML_PIPLINE_PROJECT
+Version: 0.0.1
+Summary: A sample ML_PIPLINE_PROJECT bsic
+Author: Afsha
+Author-email: 248272946+Afsh-0@users.noreply.github.com
+Requires-Dist: pandas
+Requires-Dist: Flask
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
