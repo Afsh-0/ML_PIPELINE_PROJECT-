@@ -1,0 +1,9 @@
+[2026-03-25 12:43:21,062] 30 root - INFO - Data Ingestion started
+[2026-03-25 12:43:21,062] 32 root - INFO - Data Reading using Pandas library from local system
+[2026-03-25 12:43:21,167] 34 root - INFO - Data Reading Completed
+[2026-03-25 12:43:21,415] 38 root - INFO - Data splitted into train and test
+[2026-03-25 12:43:21,650] 45 root - INFO - Data Ingestion Completed
+[2026-03-25 12:43:21,785] 84 root - INFO - outliers capped on our train data
+[2026-03-25 12:43:21,816] 89 root - INFO - outliers capped on our test data
+[2026-03-25 12:43:21,817] 31 root - INFO - Data Transformation has started
+[2026-03-25 12:43:21,818] 97 root - INFO - splitting train data into dep and indep variables

@@ -6,6 +6,7 @@ from src.logger import logging
 from src.exception import CustmeException
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
+from src.components.data_transformation import DataTransformation #after data_transformation.py
 
 
 """Now we will gonna create a class with name DataIngestionConfig and we know that in ingestion
@@ -16,9 +17,9 @@ path in artifacts folder and stored it as raw.csv."""
 
 @dataclass #decorator 
 class DataIngestionConfig:
-    train_data_path = os.path.join("artifacts", "train.csv")
-    test_data_path = os.path.join("artifacts", "test.csv")
-    raw_data_path = os.path.join("artifacts", "raw.csv")
+    train_data_path = os.path.join("artifacts/data_ingestion", "train.csv")
+    test_data_path = os.path.join("artifacts/data_ingestion", "test.csv")
+    raw_data_path = os.path.join("artifacts/data_ingestion", "raw.csv")
 
 
 class DataIngestion:
@@ -53,9 +54,11 @@ class DataIngestion:
             raise CustmeException(e, sys)
 
 
+#After data_transformation.py to execute it 
 if __name__ == "__main__":
     obj = DataIngestion()
-    obj.inititate_data_ingestion() #to check whether the code is currect or not 
-
-"""now open your terminal and type
-python https(-m src.components.data_ingestion) and you will see artifact folder as a output"""
+    train_data_path, test_data_path = obj.inititate_data_ingestion() #to check whether the code is currect or not 
+    
+    data_transformation = DataTransformation() 
+    train_arr, test_arr, _ = data_transformation.inititate_data_transformation(train_data_path, test_data_path)
+"""now open your terminal and type python https(-m src.components.data_ingestion) and you will see artifact folder as a output"""
