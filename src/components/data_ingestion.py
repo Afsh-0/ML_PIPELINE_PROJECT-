@@ -7,6 +7,7 @@ from src.exception import CustmeException
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
 from src.components.data_transformation import DataTransformation #after data_transformation.py
+from src.components.model_training import ModelTraining
 
 
 """Now we will gonna create a class with name DataIngestionConfig and we know that in ingestion
@@ -61,4 +62,8 @@ if __name__ == "__main__":
     
     data_transformation = DataTransformation() 
     train_arr, test_arr, _ = data_transformation.inititate_data_transformation(train_data_path, test_data_path)
-"""now open your terminal and type python https(-m src.components.data_ingestion) and you will see artifact folder as a output"""
+    """now open your terminal and type python https(-m src.components.data_ingestion) and you will see artifact folder as a output"""
+    
+    #after model_training.py
+    modeltraining = ModelTraining()
+    print(modeltraining.inititate_model_training(train_arr, test_arr))

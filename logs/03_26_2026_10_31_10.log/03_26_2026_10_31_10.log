@@ -1,0 +1,11 @@
+[2026-03-26 10:31:14,290] 31 root - INFO - Data Ingestion started
+[2026-03-26 10:31:14,290] 33 root - INFO - Data Reading using Pandas library from local system
+[2026-03-26 10:31:14,384] 35 root - INFO - Data Reading Completed
+[2026-03-26 10:31:14,588] 39 root - INFO - Data splitted into train and test
+[2026-03-26 10:31:14,806] 46 root - INFO - Data Ingestion Completed
+[2026-03-26 10:31:14,926] 88 root - INFO - outliers capped on our train data
+[2026-03-26 10:31:14,942] 93 root - INFO - outliers capped on our test data
+[2026-03-26 10:31:14,942] 31 root - INFO - Data Transformation has started
+[2026-03-26 10:31:14,942] 101 root - INFO - splitting train data into dep and indep variables
+[2026-03-26 10:31:14,942] 106 root - INFO - splitting test data into dep and indep variables
+[2026-03-26 10:34:25,957] 89 root - INFO - best model found, Model name is Logistic Regression, accuracy score: 0.7236155184768144
